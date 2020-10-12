@@ -8,18 +8,24 @@ class Food{
         this.deductFood;
         this.image = loadImage("images/Milk.png");
 
-        this.imageSprite = createSprite(250, 250, 1, 1)
+        this.imageSprite = createSprite(275, 250, 1, 1)
 
     }
 
     bedroom(){
-        this.imageSprite.addImage(bedroomIMG)
+        this.imageSprite.addImage(bedroomIMG);
+        this.imageSprite.x = 250;
+        this.imageSprite.y = 250;
     }
     washroom(){
-        this.imageSprite.addImage(washroomIMG)
+        this.imageSprite.addImage(washroomIMG);
+        this.imageSprite.x = 250;
+        this.imageSprite.y = 250
       }
       garden(){
-        this.imageSprite.addImage(gardenIMG)
+        this.imageSprite.addImage(gardenIMG);
+        this.imageSprite.x = 250;
+        this.imageSprite.y = 140;
       }
 
     display(){

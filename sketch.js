@@ -41,17 +41,17 @@ function setup() {
   addFood.position(800, 95);
   addFood.mousePressed(addFoods);
 
-  readGameState = database.ref('gameState');
-  readGameState.on("value", function(data){
-    gameState = data.val();
-  })
+  
 }
 
 
 function draw() {  
   background(color(46, 139, 87))
 
-
+  gameState = database.ref('gameState');
+    gameState.on("value", function(data){
+      gameState = data.val();
+    })
 
   fedTime = database.ref('FeedTime')
   fedTime.on("value",function(data){
@@ -59,6 +59,8 @@ function draw() {
   })
 
   foodObj.display();
+
+  //console.log(gameState)
 
   //console.log(foodStock)
 
